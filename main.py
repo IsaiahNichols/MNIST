@@ -1,1 +1,0 @@
-# Recreation of MNIST
