@@ -1,4 +1,4 @@
-# My MNIST program
+# My Recreation of the MNIST Program
 import torch
 import torchvision
 
