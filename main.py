@@ -3,8 +3,11 @@ import torch
 import torchvision
 
 # Steps to complete
-# 1) Load Data
-# 2) Create Model
-# 3) Train model
-# 4) Test model
-# 5) Evaluate Performance
+# 1) Define Hyper Params
+# 2) Load Data
+# 3) Create Model
+# 4) Train model
+# 5) Test model
+# 6) Evaluate Performance
+
+

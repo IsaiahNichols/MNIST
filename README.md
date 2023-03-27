@@ -4,9 +4,9 @@
 The purpose of this project is to learn the fundamentals of machine learning and the Pytorch library.
 
 ### Learning Approach:
-1. Skim through chosen [article](https://nextjournal.com/gkoehler/pytorch-mnist).
-2. Reread the article, but this time more thoroughly.
-3. Read through code in "tutorial.py" independant of the article with the intention of understanding as much as possible.
+1. Skim through chosen articles.
+2. Reread the articles, but this time more thoroughly.
+3. Read through code in "tutorial.py" independant of the articles with the intention of understanding as much as possible.
 4. Write my own MNIST program with as little referencing as possible to the tutorial code.
 5. Complete the README with an explanation of my code with the intention of utilizing the Feynman Technique.
 
