@@ -31,7 +31,7 @@ class Net(torch.nn.Module):
         super(Net, self).__init__()
         self.conv1 = torch.nn.Conv2d(1, 32, kernel_size=5, padding=2)
         self.conv2 = torch.nn.Conv2d(32, 64, kernel_size=5, padding=2)
-        self.lin1 = torch.nn.Linear(5*5*64, 1024)
+        self.lin1 = torch.nn.Linear(7*7*64, 1024)
         self.lin2 = torch.nn.Linear(1024, 10)
         self.relu = torch.nn.ReLU()
         self.pool = torch.nn.MaxPool2d(kernel_size=2, stride=2)
@@ -44,7 +44,7 @@ class Net(torch.nn.Module):
         output = self.conv2(output)
         output = self.relu(output)
         output = self.pool(output)
-        output = output.view(-1, 5*5*64)
+        output = output.view(-1, 7*7*64) # x = x.view(-1, 7*7*64)
         output = self.lin1(output)
         output = self.relu(output)
         output = self.drop(output)
@@ -81,7 +81,7 @@ with torch.no_grad():
     for images, labels in test_data_loader:
         output = model(images)
 
-        index, prediction = torch.max(output)
+        index, prediction = torch.max(output.data, 1)
 
         total += labels.size(0)
         correct += (prediction == labels).sum().item()
