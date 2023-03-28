@@ -11,7 +11,6 @@ The purpose of this project is to learn the fundamentals of machine learning and
 5. Complete the README with an explanation of my code with the intention of utilizing the Feynman Technique.
 
 ### Explanation:
-The purpose of this explanation is to uncover gaps in my knowledge and hopefully provide those interested with a decent explanation of this entry level machine learning project.
+The purpose of this explanation is to uncover gaps in my knowledge and hopefully provide those interested with a light explanation of this entry level machine learning project. It should be noted that this is not an attempt to make a completly comprehensive guide.
 
 \[W.I.P\]
-
