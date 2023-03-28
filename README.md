@@ -12,3 +12,6 @@ The purpose of this project is to learn the fundamentals of machine learning and
 
 ### Explanation:
 The purpose of this explanation is to uncover gaps in my knowledge and hopefully provide those interested with a decent explanation of this entry level machine learning project.
+
+\[W.I.P\]
+
