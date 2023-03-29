@@ -20,7 +20,7 @@ The purpose of this explanation is to uncover gaps in my knowledge and hopefully
     num_of_epochs = 10
     batch_size = 64
 
-Hyper perameters are settings made by the programmer on how they want their neural net to behave. By setting `learning_rate = 0.01`, the optimizer (present later in the script) will adjust the paramters in order to reduce the loss function in increments of `0.01`. The value chosen (to my knowledge) is a standard starting point because of its generally acceptable performance for a veriaty of machine learning tasks. The `num_of_epochs` simply states the amount of iterations the training phase will make over the training data and the `batch_size` states how the data will be broken up in order to save resources and time.
+Hyper perameters are settings made by the programmer on how they want their neural net to behave. By setting `learning_rate = 0.01`, the optimizer (present later in the script) will adjust the paramters (aka the weights) in order to reduce the loss function (also present later in the script) in increments of `0.01`. The value chosen is a standard starting point because of its generally acceptable performance for a veriaty of machine learning tasks. The `num_of_epochs` simply states the amount of iterations the training phase will make over the training data and the `batch_size` states how the data will be broken up which is useful for saving resources.
 
     # Loading Data
     transform = torchvision.transforms.Compose([torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.1307,), (0.3081,))])
@@ -31,7 +31,7 @@ Hyper perameters are settings made by the programmer on how they want their neur
     test_data = torchvision.datasets.MNIST("./data", train=False, transform=transform, download=True)
     test_data_loader = torch.utils.data.DataLoader(test_data, batch_size=batch_size, shuffle=False)
 
-This does something...
+The first step of creating a machine learning model would be to identify a set of data which patterns could be extracted from. In this case, the MNIST dataset is being used which we can later use to train our model in identifying handwritten numbers from 0-9. Above you can see we defined and loaded 2 different datasets for both training and testing which is not required but a good practice in order to check how versatile the trained model is opposed to checking how well the model memorized answered to the input it was trained on. More specifically, `transform = torchvision.transforms.Compose([torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.1307,), (0.3081,))])` defines the original transformation we'll make on the data since the original files containing the data we need are in an unsupported and inefficiant format. `train_data = torchvision.datasets.MNIST("./data", train=True, transform=transform, download=True)` and `train_data_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, shuffle=True)` define and organize the data into a format best for our use case. Lastly, `test_data = torchvision.datasets.MNIST("./data", train=False, transform=transform, download=True)` and `test_data_loader = torch.utils.data.DataLoader(test_data, batch_size=batch_size, shuffle=False)` do the same thing as when we defined and organized the training data except since we will use this data for training we specified the need for the training set with `train=False` and turned shuffle off since it will not have an effect on the neural net at that point.
 
     # Creating Model
     class Net(torch.nn.Module):
