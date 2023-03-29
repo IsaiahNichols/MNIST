@@ -44,7 +44,7 @@ class Net(torch.nn.Module):
         output = self.conv2(output)
         output = self.relu(output)
         output = self.pool(output)
-        output = output.view(-1, 7*7*64) # x = x.view(-1, 7*7*64)
+        output = output.view(-1, 7*7*64)
         output = self.lin1(output)
         output = self.relu(output)
         output = self.drop(output)
