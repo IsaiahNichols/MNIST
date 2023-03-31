@@ -73,9 +73,9 @@ the `Net` uses commonplace layers when tackling problems relating to data with s
     ![Convolutional Layer Kernel Gif](assets/2D_Convolution_Animation.gif)
 
 - `Linear`: **Also known as a "fully connected layer" the linear layer is useful for recognizing complex relationships between every input by applying a linear transformation to it**. The way it does this is, as the name implies, connecting every input to a determined number of outputs. Flattening the input is required to do this and simply means turning the input from a multidimensional tensor into a tensor of 1 dimension which can be seen when `output = output.view(-1, 7*7*64)`.
-- `ReLu`: ...
-- `MaxPool2d`: ...
-- `Dropout`: ...
+- `ReLu`: **Used to remove negative values, similar to garbage removal**.
+- `MaxPool2d`: **Reduce input dimensions**.
+- `Dropout`: **Randomaly removes a certain percentage of input to better generalize neural net**.
 
 Note: Tensors are very similar to multidimensional arrays but the main differece is that they have GPU/TPU support which is useful since neural nets require many small calculations which can save us time when done in parralel.
 
